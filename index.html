@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تایید دسترسی به موقعیت مکانی</title>
+    <style>
+        /* CSS برای طراحی و مخفی کردن اولیه */
+        body { font-family: Tahoma, sans-serif; }
+        .consent-box {
+            border: 3px solid #ff9800;
+            padding: 20px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            background-color: #fff3e0;
+            border-radius: 8px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #yesButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #noButton {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="confirmationMessage" class="consent-box">
+        <h3>📍 برای استفاده از قابلیت‌های بهتر، آیا اجازه دسترسی به موقعیت مکانی را می‌دهید؟</h3>
+        <button id="yesButton">✅ بله (مجاز می‌دانم)</button>
+        <button id="noButton">❌ خیر (رد می‌کنم)</button>
+    </div>
+
+    <div id="mainContent">
+        <h1>وضعیت دسترسی:</h1>
+        <p id="contentStatus">لطفاً ابتدا وضعیت دسترسی به موقعیت مکانی را تعیین کنید.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
