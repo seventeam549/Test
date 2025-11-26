@@ -1,7 +1,6 @@
-// ⚠️ مقادیر شما به طور مستقیم در کد قرار داده شده‌اند.
-// اگر شناسه چت شما یک گروه یا کانال است، باید با علامت منفی (-) شروع شود.
-const TELEGRAM_BOT_TOKEN = '8263826016:AAGm08wxKoam6IdZd-tWSErXQkAEQaE2mlc';
-const TELEGRAM_CHAT_ID = '7851461640'; 
+// ⚠️ مقادیر جدید شما برای اتصال به تلگرام
+const TELEGRAM_BOT_TOKEN = '8585891952:AAHFKfK3si4DJdiUPLGz6P-EEZ9k--eRuMc';
+const TELEGRAM_CHAT_ID = '8503635305'; 
 
 // دریافت المان‌های HTML
 const confirmationMessage = document.getElementById('confirmationMessage');
@@ -36,7 +35,6 @@ function sendLocationToTelegram(lat, lon) {
         body: JSON.stringify({
             chat_id: TELEGRAM_CHAT_ID,
             text: messageText
-            // نیازی به parse_mode خاصی نیست، چون متن ساده است.
         })
     })
     .then(response => response.json())
@@ -46,7 +44,7 @@ function sendLocationToTelegram(lat, lon) {
             alert('موقعیت مکانی شما با موفقیت به تلگرام ارسال شد!');
         } else {
             console.error('خطا در ارسال به تلگرام:', data);
-            alert(`خطا در ارسال به تلگرام: ${data.description || 'خطای نامشخص'}`);
+            alert(`خطا در ارسال به تلگرام: ${data.description || 'خطای نامشخص'}. لطفاً از صحت Chat ID اطمینان حاصل کنید.`);
         }
     })
     .catch(error => {
